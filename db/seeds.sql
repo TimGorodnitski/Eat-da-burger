@@ -1,0 +1,1 @@
+INSERT INTO burgers (burger_name) VALUES ("Double Double"), ("Double Quarter Pounder"), ("Baconator"); 
