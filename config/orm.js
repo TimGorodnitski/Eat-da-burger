@@ -51,13 +51,13 @@ let orm = {
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
-        queryString += ") ";
+        queryString += 'VALUES ("';
+        queryString += vals;
+        queryString += '") ';
 
         console.log(queryString);
 
-        connection.query(queryString, vals, function (err, res) {
+        connection.query(queryString, function (err, res) {
             if (err) { throw err };
             cb(res);
         });

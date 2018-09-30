@@ -11,12 +11,6 @@ router.get("/", function (req, res) {
     });
 });
 
-router.post("/api/burger", function (req, res) {
-    burger.insertOne("burger_name", req.body.name, function (result) {
-        res.json({ id: result.insertId });
-    })
-});
-
 router.put("/api/burger/:id", function (req, res) {
     let condition = "id = " + req.params.id;
 
@@ -28,5 +22,13 @@ router.put("/api/burger/:id", function (req, res) {
         }
     )
 });
+
+router.post("/api/burger", function (req, res) {
+    burger.insertOne("burger_name", req.body.burger_name, function (result) {
+        res.json({ id: result.insertId });
+    })
+});
+
+
 
 module.exports = router;

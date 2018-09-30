@@ -26,9 +26,9 @@ $(function () {
         event.preventDefault();
 
         var newBurger = {
-            name: $("#newburg").val().trim()
+            burger_name: $("#newburg").val().trim()
         };
-
+        
         // Send the POST request.
         $.ajax("/api/burger/", {
             type: "POST",
