@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    line-height: 27px;
+
+    background-color: #ccc;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.wrapper {
+    width: 1024px;
+
+    margin: 40px auto;
+}
+
+#ready,
+#menu {
+    width: 500px;
+    padding: 30px;
+}
+
+#ready {
+    float: left;
+
+    background: #fff;
+}
+
+#menu {
+    float: right;
+
+    background: #eee;
+}

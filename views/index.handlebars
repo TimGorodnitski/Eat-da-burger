@@ -1,44 +1,55 @@
-<h1>Here's the Menu</h1>
+<div class="wrapper">
 
-<h2>Burgers ready to eat</h2>
+    <section id="ready">
+        <h2>Burgers ready to eat</h2>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>
-        {{burger_name}}
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li>
+                {{burger_name}}
 
-        <button class="change-devoured" data-id="{{id}}" data-newdevoured="true">
-            DEVOUR!
-        </button>
-    </li>
-    {{/unless}}
-    {{/each}}
-</ul>
+                <button class="change-devoured" data-id="{{id}}" data-newdevoured="true">
+                    DEVOUR!
+                </button>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
 
-<h2>Burgers you can order</h2>
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-        <li>
-        {{burger_name}}
+    </section>
 
-        <button class="change-devoured" data-id="{{id}}" data-newdevoured="false">
-            ORDER ANOTHER
-        </button>
-    </li>
-    {{/if}}
-    {{/each}}
-</ul>
+    <section id="menu">
+        <h2>Burgers you can order</h2>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <li>
+                {{burger_name}}
 
-    <div class="form-group">
-        <label for="newburg">Burger Name:</label>
-        <input type="text" id="newburg" name="burger_name">
-    </div>
+                <button class="change-devoured" data-id="{{id}}" data-newdevoured="false">
+                    ORDER ANOTHER
+                </button>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
 
-    <button type="submit">ADD BURGER</button>
-</form>
+        <h2>Add a Burger</h2>
+        <form class="create-form">
+
+            <div class="form-group">
+                <label for="newburg">Burger Name:</label>
+                <input type="text" id="newburg" name="burger_name">
+            </div>
+
+            <button type="submit">ADD BURGER</button>
+        </form>
+    </section>
+
+
+
+
+</div>
