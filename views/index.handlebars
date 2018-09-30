@@ -6,9 +6,9 @@
     {{#each burgers}}
     {{#unless devoured}}
     <li>
-        {{name}}
+        {{burger_name}}
 
-        <button class="change-devoured" data-id="{{id}}" data-newdevoured="false">
+        <button class="change-devoured" data-id="{{id}}" data-newdevoured="true">
             DEVOUR!
         </button>
     </li>
@@ -22,9 +22,9 @@
     {{#each burgers}}
     {{#if devoured}}
         <li>
-        {{name}}
+        {{burger_name}}
 
-        <button class="change-devoured" data-id="{{id}}" data-newdevoured="true">
+        <button class="change-devoured" data-id="{{id}}" data-newdevoured="false">
             ORDER ANOTHER
         </button>
     </li>
@@ -37,7 +37,7 @@
 
     <div class="form-group">
         <label for="newburg">Burger Name:</label>
-        <input type="text" id="newburg" name="name">
+        <input type="text" id="newburg" name="burger_name">
     </div>
 
     <button type="submit">Add Burger</button>
